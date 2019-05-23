@@ -12,8 +12,8 @@ export default {
         return state;
     },
     toggleMultiplePanels(state) {
-        state.openPanels = [];
         state.openMultiplePanels = !state.openMultiplePanels;
+        state.openMultiplePanels ? null : state.openPanels = [];
         return state;
     }
 }
