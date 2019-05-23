@@ -1,0 +1,47 @@
+@import 'reset.scss';
+@import 'vars.scss';
+@import 'lib.scss';
+@import 'fonts.scss';
+@import 'utils.scss';
+@import 'components.scss';
+
+* {
+  font-family: 'Roboto';
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  & > * {
+    grid-column: 2 / -2;
+  }
+
+  header {
+    grid-column: 1 / -1;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  footer {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include media("<tablet") {
+    main {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.ajaxElement > img {
+  width: 75px;
+  display: block;
+  margin: auto;
+}
