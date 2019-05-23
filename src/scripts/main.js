@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	const StatusBar = new StatusBarComponent('.StatusBarComponent');
 	StatusBar.render();
 
-	const ToggleMultiplePanels = new ToggleComponent('.ToggleComponent');
-	ToggleMultiplePanels.render();
+	const Toggle = new ToggleComponent('.ToggleComponent');
+	Toggle.render();
 
 }, false);
 

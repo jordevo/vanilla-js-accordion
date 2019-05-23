@@ -6,7 +6,7 @@ export class ToggleComponent extends Component {
 	constructor(element) {
     super({
       store,
-      element: document.querySelector(element)
+      element: document.querySelector(element + ' input')
     });
 
     this._addEventListeners();
@@ -14,12 +14,9 @@ export class ToggleComponent extends Component {
 
   _addEventListeners() {
   	const _store = store;
-  	this.element.addEventListener('click', () => {
+  	this.element.addEventListener('change', () => {
 	    _store.dispatch('toggleMultiplePanels');
 		});
   }
 
-  render() {
-    store.state.openMultiplePanels ? this.element.innerHTML = 'Open one panel' : this.element.innerHTML = 'Open multiple panels';
-  }
 }
