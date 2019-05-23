@@ -1,17 +1,18 @@
 import { GetLoremIpsum } from './utils';
 import { AccordionComponent } from './components/accordion';
-import { ButtonComponent } from './components/button';
 import { StatusBarComponent } from './components/statusbar';
 import { ToggleComponent } from './components/toggle';
+import store from './store/index.js';
 
 const ajaxElement = document.querySelector('.AjaxElement');
 
 const loadFacts = () => {
 	ajaxElement.innerHTML = '<img src="./assets/images/oval.svg" alt="loading">';
-	setTimeout( () => {
+	setTimeout(() => {
 		GetLoremIpsum()
 	  .then(res => {
-	    ajaxElement.innerHTML = res
+	    ajaxElement.innerHTML = res;
+	   	store.dispatch('shownNewFact');
 	  })
 	  .catch(err => (ajaxElement.innerHTML = '<p>Error: content could not be loaded.</p>'));
 	},500);
@@ -23,9 +24,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	const Accordion = new AccordionComponent('.AccordionComponent');
 	Accordion.render();
-
-	const ButtonNewFact = new ButtonComponent('.ButtonComponent');
-	ButtonNewFact.render();
 
 	const StatusBar = new StatusBarComponent('.StatusBarComponent');
 	StatusBar.render();

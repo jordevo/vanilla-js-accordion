@@ -1,5 +1,5 @@
 export default {
     openPanels: [],
-    factsShown: 1,
+    factsShown: 0,
     openMultiplePanels: false
 }
