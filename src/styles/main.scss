@@ -34,7 +34,7 @@ footer {
   grid-template-rows: auto 1fr auto;
 
   @include media(">tablet") {
-    & > * {
+    & > *:not(header):not(footer) {
       grid-column: 2 / -2;
     }
   }
