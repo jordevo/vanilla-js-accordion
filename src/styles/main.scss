@@ -9,29 +9,33 @@
   font-family: 'Roboto';
 }
 
+header {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+main {
+  grid-column: 1 / -1;
+}
+
+footer {
+  grid-column: 1 / -1;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5em;
+}
+
 .Wrapper {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto 1fr auto;
 
-  & > * {
-    grid-column: 2 / -2;
-  }
-
-  header {
-    grid-column: 1 / -1;
-  }
-
-  footer {
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  @include media("<tablet") {
-    main {
-      grid-column: 1 / -1;
+  @include media(">tablet") {
+    & > * {
+      grid-column: 2 / -2;
     }
   }
 }
