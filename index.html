@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assessment for Adevinta - Vanilla Accordion - Jordi</title>
+  <title>Assessment for Adevinta - Vanilla JS Accordion - Jordi</title>
   <link rel="shortcut icon" href="./assets/images/favicon.ico">
   <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
@@ -13,29 +13,34 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>Vanilla Accordion</h1>
+      <h1 class="u-noSelect">Vanilla JS Accordion</h1>
     </header>
     <main>
-      <span class="StatusBarComponent"></span>
+      <div class="StatusBar">
+        <button class="ButtonElement ToggleComponent">Open one panel</button>
+      </div>
       <dl class="AccordionComponent">
-        <dt class="AccordionComponent-header">Section 1</dt>
+        <dt class="AccordionComponent-header u-noSelect">Section 1</dt>
         <dd class="AccordionComponent-panel">
           <p>Section 1 Content...</p>
         </dd>
-        <dt class="AccordionComponent-header">Section 2</dt>
+        <dt class="AccordionComponent-header u-noSelect">Section 2</dt>
         <dd class="AccordionComponent-panel">
           <p>Section 2 Content...</p>
         </dd>
-        <dt class="AccordionComponent-header">Section 3</dt>
+        <dt class="AccordionComponent-header u-noSelect">Section 3</dt>
         <dd class="AccordionComponent-panel">
           <p>Section 3 Content...</p>
         </dd>
-        <dt class="AccordionComponent-header">Section 4</dt>
+        <dt class="AccordionComponent-header u-noSelect">Section 4</dt>
         <dd class="AccordionComponent-panel">
           <div class="ajaxElement">
             <img src="./assets/images/oval.svg" alt="loading">
           </div>
-          <button class="ButtonComponent">Next random fact</button>
+          <div class="StatusBar">
+            <button class="ButtonElement ButtonComponent">Next random fact</button>
+            <span class="StatusBarComponent"></span>
+          </div>
         </dd>
       </dl>
     </main>
