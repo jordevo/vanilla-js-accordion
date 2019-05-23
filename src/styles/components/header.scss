@@ -7,11 +7,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: $bg-color;
   text-align: center;
 
   h1 {
-    color: #333;
     font-family: 'Montserrat', sans-serif;
     font-size: 3vw;
     line-height: 1em;
@@ -23,10 +22,5 @@ header {
     @include media("<phone") {
       font-size: 9vw;
     }
-  }
-  h3 {
-    font-size: 1em;
-    line-height: 1em;
-    text-shadow: -2px -2px 3px #fff;
   }
 }

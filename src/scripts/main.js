@@ -7,11 +7,14 @@ import { ToggleComponent } from './components/toggle';
 const ajaxElement = document.querySelector('.AjaxElement');
 
 const loadFacts = () => {
-	GetLoremIpsum()
-  .then(res => {
-    ajaxElement.innerHTML = res
-  })
-  .catch(err => (ajaxElement.innerHTML = 'Error: content could not be loaded.'));
+	ajaxElement.innerHTML = '<img src="./assets/images/oval.svg" alt="loading">';
+	setTimeout( () => {
+		GetLoremIpsum()
+	  .then(res => {
+	    ajaxElement.innerHTML = res
+	  })
+	  .catch(err => (ajaxElement.innerHTML = '<p>Error: content could not be loaded.</p>'));
+	},500);
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {

@@ -40,8 +40,13 @@ footer {
   }
 }
 
-.AjaxElement > img {
-  width: 75px;
-  display: block;
-  margin: auto;
+.AjaxElement {
+  transition: all .25s;
+  & > img {
+    margin: auto;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    width: 38px;
+    display: block;
+  }
 }

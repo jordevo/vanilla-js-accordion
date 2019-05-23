@@ -1,13 +1,14 @@
+$base-gray: #dddddd;
+
 $base-color: #f3e5ab;
+$border-dark-base: darken($base-color, 10%);
 
 $secondary-color: #f3c1ab;
-$border-dark-secondary: rgba($secondary-color, 0.9);
+$border-dark-secondary: darken($secondary-color, 10%);
 
 $tertiary-color: #ddf3ab;
-$border-dark-tertiary: rgba($tertiary-color, 0.9);
+$border-dark-tertiary: darken($tertiary-color, 10%);
 
 $bg-color: #565656;
-
-$border-dark: rgba($bg-color, 0.9);
-
-$base-gray: #dddddd;
+$bg-color-dark: darken($bg-color, 90%);
+$bg-color-light: lighten($bg-color, 10%);
