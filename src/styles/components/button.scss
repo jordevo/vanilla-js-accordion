@@ -1,6 +1,20 @@
 .ButtonElement {
 
 	cursor: pointer;
-	padding: 0.5em;
+	border: none;
+	background-color: $bg-color;
+	font-size: inherit;
+
+	&:hover {
+    transition: all .25s;
+		background-color: darken($bg-color,10%);
+	}
+
+	color: $base-color;
+	cursor: pointer;
+	padding: 1em;
+	text-transform: uppercase;
+
+	@extend .u-noFocusOutline;
 
 }
