@@ -9,7 +9,7 @@
   font-family: 'Roboto';
 }
 
-.wrapper {
+.Wrapper {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -36,7 +36,7 @@
   }
 }
 
-.ajaxElement > img {
+.AjaxElement > img {
   width: 75px;
   display: block;
   margin: auto;

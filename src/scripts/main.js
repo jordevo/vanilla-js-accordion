@@ -4,7 +4,7 @@ import { ButtonComponent } from './components/button';
 import { StatusBarComponent } from './components/statusbar';
 import { ToggleComponent } from './components/toggle';
 
-const ajaxElement = document.querySelector('.ajaxElement');
+const ajaxElement = document.querySelector('.AjaxElement');
 
 const loadFacts = () => {
 	GetLoremIpsum()
