@@ -1,10 +1,16 @@
 export default {
     openPanel(state, payload) {
-        state.openMultiplePanels ? state.openPanels.push(payload) : state.openPanels = [payload];
+        state.openMultiplePanels ?
+            state.openPanels.push(payload) :
+            state.openPanels = [payload];
         return state;
     },
     closePanel(state, payload) {
-        state.openPanels.splice(state.openPanels.findIndex((element) => element === payload), 1);
+        state.openPanels.splice(
+            state.openPanels.findIndex(
+                (element) => element === payload
+            ),
+            1);
         return state;
     },
     shownNewFact(state) {

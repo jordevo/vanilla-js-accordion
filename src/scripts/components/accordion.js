@@ -9,7 +9,9 @@ export class AccordionComponent extends Component {
           element: document.querySelector(element)
         });
 
-		const container = typeof element === 'string' ? document.querySelector(element) : element;
+		const container = typeof element === 'string' ?
+            document.querySelector(element) :
+            element;
 
 		if (container == null) {
 			return;
@@ -27,7 +29,9 @@ export class AccordionComponent extends Component {
         const children = Array.from(this.container.children);
 
         // grabs all header elements
-        this.headers = children.filter(header => header.classList.contains( this.params.headerClass.substr(1) ));
+        this.headers = children.filter(header =>
+            header.classList.contains( this.params.headerClass.substr(1) )
+        );
 
         // sets "unique" random ids
         this.ids = this.headers.map( (el) => {
@@ -35,7 +39,9 @@ export class AccordionComponent extends Component {
         });
 
         // grabs all panel elements
-        this.panels = children.filter(panel => panel.classList.contains( this.params.panelClass.substr(1) ));
+        this.panels = children.filter(panel =>
+            panel.classList.contains( this.params.panelClass.substr(1) )
+        );
 
         this._setupAttributes();
 
@@ -109,8 +115,14 @@ export class AccordionComponent extends Component {
     _setupHeaders() {
         const _self = this;
         this.headers.forEach( (header, index) => {
-            header.setAttribute('id', `${_self.params.primitiveClass}-header-${_self.ids[index].id}`);
-            header.setAttribute('aria-controls', `${_self.params.primitiveClass}-panel-${_self.ids[index].id}`);
+            header.setAttribute(
+                'id',
+                `${_self.params.primitiveClass}-header-${_self.ids[index].id}`
+            );
+            header.setAttribute(
+                'aria-controls',
+                `${_self.params.primitiveClass}-panel-${_self.ids[index].id}`
+            );
         });
     }
 
@@ -122,8 +134,14 @@ export class AccordionComponent extends Component {
         const _self = this;
         this.panels.forEach( (panel, index) => {
             panel.classList.add(_self.params.hiddenClass);
-            panel.setAttribute('id', `${_self.params.primitiveClass}-panel-${_self.ids[index].id}`);
-            panel.setAttribute('aria-labelledby', `${_self.params.primitiveClass}-header-${_self.ids[index].id}`);
+            panel.setAttribute(
+                'id',
+                `${_self.params.primitiveClass}-panel-${_self.ids[index].id}`
+            );
+            panel.setAttribute(
+                'aria-labelledby',
+                `${_self.params.primitiveClass}-header-${_self.ids[index].id}`
+            );
         });
     }
 }

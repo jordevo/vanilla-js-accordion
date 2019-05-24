@@ -14,7 +14,9 @@ const loadFacts = () => {
 	    ajaxElement.innerHTML = res;
 	   	store.dispatch('shownNewFact');
 	  })
-	  .catch(err => (ajaxElement.innerHTML = '<p>Error: content could not be loaded.</p>'));
+	  .catch(err =>
+	  	{ ajaxElement.innerHTML = '<p>Error: content could not be loaded.</p>' }
+	  );
 	},500);
 }
 

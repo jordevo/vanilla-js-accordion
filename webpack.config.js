@@ -38,7 +38,7 @@ module.exports = {
         // configuration in `.babelrc`
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         // Look for Sass files and process them according to the
