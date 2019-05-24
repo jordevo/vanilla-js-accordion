@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   rules: {
-    "max-len": [1, 80, 2, {ignoreComments: true}]
+    "max-len": [1, 80, 2, {ignoreComments: true}],
+    "quotes": ["error", "single"]
   }
 };
