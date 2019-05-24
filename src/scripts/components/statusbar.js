@@ -13,7 +13,7 @@ export class StatusBarComponent extends Component {
 	render() {
 		this.element.innerHTML = `You have seen
 			 ${store.state.factsShown} random ajax
-			 fact${store.state.factsShown > 1 ? 's' : ''}`;
+			 fact${store.state.factsShown !== 1 ? 's' : ''}`;
 	}
 
 }
