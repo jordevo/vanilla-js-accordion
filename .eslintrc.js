@@ -3,11 +3,13 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
     allowImportExportEverywhere: false,
+    ecmaVersion: 6,
     ecmaFeatures: {
       globalReturn: false,
+      experimentalObjectRestSpread: true
     },
     babelOptions: {
-      configFile: "path/to/config.js",
+      configFile: ".babelrc",
     },
   },
   rules: {

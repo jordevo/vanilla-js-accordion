@@ -4,6 +4,7 @@
   "description": "Vanilla Javascript Accordion Assessment",
   "main": "main.js",
   "author": "Jordi Munoz",
+  "license": "MIT",
   "scripts": {
     "dev:assets": "webpack --watch",
     "dev:start": "live-server --open=./public/ --host=localhost --watch=./public/",
