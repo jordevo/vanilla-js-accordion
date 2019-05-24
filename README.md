@@ -1,4 +1,4 @@
-# vanilla-js-accordion
+# A vanilla JS accordion
 
 A vanilla javascript accordion with some cool features. A once in a lifetime experience.
 
@@ -42,6 +42,8 @@ Will compile, minify and autoprefix Sass to CSS. Will Minify and uglify JavaScri
 
 After building for production you can take the `./public` directory and deploy it.
 
-## Tutorial
+## Live demo
 
--Jordi Munoz @jordevo
+A live demo should be available [here](https://jordevo.github.io/vanilla-js-accordion "Vanilla JS accordion live").
+
+- Jordi Munoz @jordevo
