@@ -8,16 +8,14 @@ const ajaxElement = document.querySelector('.AjaxElement');
 
 const loadFacts = () => {
 	ajaxElement.innerHTML = '<img src="./assets/images/oval.svg" alt="loading">';
-	setTimeout(() => {
-		GetLoremIpsum()
-	  .then(res => {
-	    ajaxElement.innerHTML = res;
-	   	store.dispatch('shownNewFact');
-	  })
-	  .catch(err =>
-	  	{ ajaxElement.innerHTML = '<p>Error: content could not be loaded.</p>' }
-	  );
-	},500);
+	GetLoremIpsum()
+  .then(res => {
+    ajaxElement.innerHTML = res;
+   	store.dispatch('shownNewFact');
+  })
+  .catch(err =>
+  	{ ajaxElement.innerHTML = '<p>Error: content could not be loaded.</p>' }
+  );
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
