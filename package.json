@@ -37,6 +37,13 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"
   },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": ""
